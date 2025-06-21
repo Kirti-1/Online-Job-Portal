@@ -41,6 +41,10 @@ public class UsersController {
 
     @PostMapping("/register/new")
     public String userRegistration(@Valid Users users, BindingResult result, Model model) {
+    	/* TO-DO
+    	 * If a user has already been added then return a valid error or user already added pop up -- handle this.
+    	 * 
+    	 * */
        usersService.addNew(users);
         return "redirect:/dashboard/";
     }
